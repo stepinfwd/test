@@ -3,7 +3,7 @@ import { db } from "./firebase";
 
 
 const handleSubmit = async (data) => {
-    console.log("users adding",data)
+    console.log("adding users",data)
     try {
         
         const docRef = await addDoc(collection(db, "users"),data);
