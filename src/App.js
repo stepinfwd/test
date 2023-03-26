@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.scss";
 import Testimonial from "./Carousel";
 import NavbarComp from "./Navbar";
@@ -6,6 +5,7 @@ import profile from "./images/profile.png";
 import star1 from "./images/star1.png";
 import star2 from "./images/star2.png";
 import flower from "./images/flower.jpg";
+import Contact from "./Contact";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <h1>Nadeem Zakkeer</h1>
         <h2>Therapeutic Coach</h2>
 
-        <div class="svg-wrapper">
+        <div className="svg-wrapper">
           <p className="cta text">One step at a time</p>
         </div>
       </div>
@@ -47,14 +47,14 @@ function App() {
           </p>
           <p>I see u.</p>
         </div>
-        <div>
+        <div style={{display:'flex',justifyContent:'center'}}>
           <img src={profile}></img>
         </div>
       </div>
 
       <div className="section section-3">
-        <img src={star1} className='star1'/>
-        <img src={star2} className='star2'/>
+        <img src={star1} className="star1" />
+        <img src={star2} className="star2" />
 
         <div className="section-3-card card1">
           <p>
@@ -211,61 +211,7 @@ function App() {
         <Testimonial />
       </div>
 
-      <div className="contact-section section ">
-        <div className="contact-section-wrap">
-          <section className=" col-6">
-            <h1>Get in touch.</h1>
-
-            <p>To get in touch with us</p>
-            <form>
-              <div className="form-group">
-                <label for="name">Name</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="name"
-                  placeholder="Name"
-                />
-              </div>
-              <div className="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input
-                  type="email"
-                  className="form-control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
-                  placeholder="Enter email"
-                />
-                <small id="emailHelp" className="form-text text-muted">
-                  We'll never share your email with anyone else.
-                </small>
-              </div>
-              <div className="form-group">
-                <label>Message</label>
-
-                <textarea
-                  className="form-control"
-                  id="exampleFormControlTextarea1"
-                  rows="3"
-                ></textarea>
-              </div>
-
-              <button type="submit" className="btn btn-primary">
-                Submit
-              </button>
-            </form>
-
-            <p>
-              Phone: 07436567799
-              <br />
-              Email: Info@nadeemzakkeer.com
-            </p>
-          </section>
-          {/* <div className="contact-img-wrap col-6">
-            <img src="https://images.unsplash.com/photo-1615797229417-c158f4258648?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
-          </div> */}
-        </div>
-      </div>
+      <Contact />
 
       <div className="social-section section">
         <div className="cta-social">
@@ -278,7 +224,7 @@ function App() {
         <div className="social-media-icons">
           <p>Lets Talk</p>
           <div className="social-icons-wrap">
-            <div>
+            <a href="mailto:Info@nadeemzakkeer.com">
               <svg
                 width="24"
                 height="24"
@@ -288,8 +234,8 @@ function App() {
               >
                 <path d="M12 0c-6.626 0-12 5.372-12 12 0 6.627 5.374 12 12 12 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12zm6.001 16.917c.552 0 .999-.448.999-.999v-7.919c0-.551-.448-.999-.999-.999h-12.002c-.551 0-.999.448-.999.999v7.919c0 .551.448.999.999.999h12.002zm-6.001-3.55l-5.45-3.782-.011 6.748h10.899v-6.748l-5.438 3.782zm5.174-5.784c-1.527 1.064-5.174 3.634-5.174 3.634l-5.203-3.634h10.377z" />
               </svg>
-            </div>
-            <div>
+            </a>
+            <a href="https://www.instagram.com/nadeemzakkeer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -298,8 +244,8 @@ function App() {
               >
                 <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 7.082c1.602 0 1.792.006 2.425.035 1.627.074 2.385.845 2.46 2.459.028.633.034.822.034 2.424s-.006 1.792-.034 2.424c-.075 1.613-.832 2.386-2.46 2.46-.633.028-.822.035-2.425.035-1.602 0-1.792-.006-2.424-.035-1.63-.075-2.385-.849-2.46-2.46-.028-.632-.035-.822-.035-2.424s.007-1.792.035-2.424c.074-1.615.832-2.386 2.46-2.46.632-.029.822-.034 2.424-.034zm0-1.082c-1.63 0-1.833.007-2.474.037-2.18.1-3.39 1.309-3.49 3.489-.029.641-.036.845-.036 2.474 0 1.63.007 1.834.036 2.474.1 2.179 1.31 3.39 3.49 3.49.641.029.844.036 2.474.036 1.63 0 1.834-.007 2.475-.036 2.176-.1 3.391-1.309 3.489-3.49.029-.64.036-.844.036-2.474 0-1.629-.007-1.833-.036-2.474-.098-2.177-1.309-3.39-3.489-3.489-.641-.03-.845-.037-2.475-.037zm0 2.919c-1.701 0-3.081 1.379-3.081 3.081s1.38 3.081 3.081 3.081 3.081-1.379 3.081-3.081c0-1.701-1.38-3.081-3.081-3.081zm0 5.081c-1.105 0-2-.895-2-2 0-1.104.895-2 2-2 1.104 0 2.001.895 2.001 2s-.897 2-2.001 2zm3.202-5.922c-.397 0-.72.322-.72.72 0 .397.322.72.72.72.398 0 .721-.322.721-.72 0-.398-.322-.72-.721-.72z" />
               </svg>{" "}
-            </div>
-            <div>
+            </a>
+            <a href="https://www.linkedin.com/in/nadeem-zakkeer-a59992192">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -308,8 +254,8 @@ function App() {
               >
                 <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 8c0 .557-.447 1.008-1 1.008s-1-.45-1-1.008c0-.557.447-1.008 1-1.008s1 .452 1 1.008zm0 2h-2v6h2v-6zm3 0h-2v6h2v-2.861c0-1.722 2.002-1.881 2.002 0v2.861h1.998v-3.359c0-3.284-3.128-3.164-4-1.548v-1.093z" />
               </svg>{" "}
-            </div>
-            <div>
+            </a>
+            <a href="https://www.youtube.com/@NadeemZakkeer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -318,7 +264,7 @@ function App() {
               >
                 <path d="M16.23 7.102c-2.002-.136-6.462-.135-8.461 0-2.165.148-2.419 1.456-2.436 4.898.017 3.436.27 4.75 2.437 4.898 1.999.135 6.459.136 8.461 0 2.165-.148 2.42-1.457 2.437-4.898-.018-3.436-.271-4.75-2.438-4.898zm-6.23 7.12v-4.444l4.778 2.218-4.778 2.226zm2-12.222c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12z" />
               </svg>{" "}
-            </div>
+            </a>
           </div>
         </div>
       </div>

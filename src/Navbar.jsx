@@ -1,9 +1,6 @@
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
 function NavbarComp() {
@@ -26,13 +23,11 @@ function NavbarComp() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Instagram</Nav.Link>
-                  <Nav.Link href="#action2">Linkedin</Nav.Link>
-                  <Nav.Link href="#action2">Twitter</Nav.Link>
-                  <Nav.Link href="#action2">YT</Nav.Link>
-
+                  <Nav.Link href="https://www.instagram.com/nadeemzakkeer/">Instagram</Nav.Link>
+                  <Nav.Link href="https://www.linkedin.com/in/nadeem-zakkeer-a59992192">Linkedin</Nav.Link>
+                  {/* <Nav.Link href="https://discord.com/channels/@me/749571602311806978/1089496833098780734">Twitter</Nav.Link> */}
+                  <Nav.Link href="https://www.youtube.com/@NadeemZakkeer">YT</Nav.Link>
                 </Nav>
-            
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>

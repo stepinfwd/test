@@ -48,4 +48,67 @@ body {
     }
   }
 
+
+
+.full-image-section {
+  background-repeat: no-repeat;
+  width: 100vw;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// @media only screen and (max-width: 600px) {
+  .services-section {
+    img {
+      height: 320px;
+    }
+  }
+
+  .banner-section {
+    height: 150vh;
+  }
+
+  .section-3 {
+    border-bottom: none !important;
+  }
+
+  .tetimonial-wrap {
+
+    .carousel,
+    .carousel-inner {
+      height: 600px;
+    }
+  }
+
+  .full-image-section p {
+    position: block;
+  }
+
+  .section-5 {
+    padding: 0;
+  }
+
+  .services-section {
+    .services-section-content {
+      padding-right: 0px !important;
+    }
+  }
+
+  .contact-section-wrap {
+    padding: 0px !important;
+  }
+  .banner-section {.cta{
+    font-size: 40px !important;}
+  }
+.section-2{
+  padding-left: 0px !important;
+}
+.section-3-card{
+  width: 100% !important;
+}
+.full-image-section p{
+  top: 0 !important;
+}
 }
