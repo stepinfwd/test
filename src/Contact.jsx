@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { handleSubmit } from "./firebase/handler";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function Contact() {
   const init = {
     name: "",
@@ -11,7 +12,10 @@ function Contact() {
   const changeHandler = (e) => {
     setUsers({ ...users, [e.target.id]: e.target.value });
   };
+  const notify = () => toast("Thanks for submission");
+
   const submitHandler = (e) => {
+    notify()
     e.preventDefault();
     if (ValidateEmail(users?.email)) {
       handleSubmit(users);
@@ -96,6 +100,8 @@ function Contact() {
               Email: Info@nadeemzakkeer.com
             </p>
           </section>
+          <ToastContainer />
+
           {/* <div className="contact-img-wrap col-6">
             <img src="https://images.unsplash.com/photo-1615797229417-c158f4258648?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
           </div> */}

@@ -6,8 +6,12 @@ import star1 from "./images/star1.png";
 import star2 from "./images/star2.png";
 import flower from "./images/flower.jpg";
 import Contact from "./Contact";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
+  const notify = () => toast("Wow so easy!");
+
   return (
     <div className="app">
       <NavbarComp />
