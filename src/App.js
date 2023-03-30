@@ -51,8 +51,8 @@ function App() {
           </p>
           <p>I see u.</p>
         </div>
-        <div style={{display:'flex',justifyContent:'center'}}>
-          <img src={profile}></img>
+        <div style={{display:'flex',justifyContent:'center'}} >
+          <img className='profile'></img>
         </div>
       </div>
 
